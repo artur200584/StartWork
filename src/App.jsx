@@ -1,9 +1,11 @@
+import Header from "./componets/Header"
+import './Styles/global.css'
+import './Styles/style.css'
+
 function App() {
   return(
     <>
-      <h1>artur</h1>
-      <h2>artur</h2>
-      {/* ksjlksjflksdf */}
+      <Header />
     </>
   )
 }

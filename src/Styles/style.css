@@ -1,0 +1,137 @@
+body {
+    max-width: 7,843px;
+    max-height: 768px;
+    background-color: #EEF2FF;
+}
+
+
+.header {
+    max-width: 1440px;
+    max-height: 84px;
+}
+
+.header__brand {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__text {
+    font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 700;
+}
+
+.header__logo {
+    mix-blend-mode: multiply;
+}
+
+.navigation {
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.nav__logo {
+    width: 112px;
+    height: 32px;
+}
+
+.nav__links {
+    display: flex;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    margin-right: 301px;
+    margin-left: 96px;
+    gap: 32px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #525252;
+}
+
+.nav__buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.nav__buttons button {
+    font-size: 16px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 10px 16px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    transition: 1s;
+}
+
+.nav__buttons button:hover {
+    background-color: #3730A3;
+    color: #fff;
+}
+
+.nav__buttons button:focus {
+    background-color: #3730A3;
+    color: #fff;
+}
+
+.burger__logo {
+    display: none;
+}
+
+.burger__logo__active {
+    display: none;
+}
+
+.modal__icons {
+    opacity: 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: hsl(243, 75%, 59%);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.modal {
+   opacity: 1;
+}
+
+.modal__arow {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+}
+
+.modal__icons ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen  and (max-width: 768px) {
+    .nav__buttons{
+        display: none;
+    }
+
+    .nav__links {
+        display: none;
+    }
+
+    .burger__logo {
+        display: block;
+        mix-blend-mode: multiply;
+    }
+}
