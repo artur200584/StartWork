@@ -1,0 +1,31 @@
+.modal__icons {
+  display: flex;
+  position: relative;
+  opacity: 1;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: hsl(243, 75%, 59%);
+  border-radius: 5px;
+}
+
+.modal {
+  opacity: 1;
+}
+
+.modal__arow {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+}
+
+.modal__icons ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

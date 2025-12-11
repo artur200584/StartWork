@@ -1,0 +1,21 @@
+.header {
+  max-width: 1440px;
+  max-height: 84px;
+}
+
+.header__brand {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__text {
+  font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+}
+
+.header__logo {
+  mix-blend-mode: multiply;
+}
