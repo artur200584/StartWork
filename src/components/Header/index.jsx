@@ -1,8 +1,8 @@
-import Nav from './Nav';
-import Modal from './Modal';
+import { useState } from 'react';
+import Nav from '../Naviation';
+import Modal from '../Modal';
 // import Hero from "./Hero"
 import style from './Header.module.scss';
-import { useState } from 'react';
 
 const Header = () => {
   const [modal, setModal] = useState(false);
