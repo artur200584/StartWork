@@ -24,7 +24,7 @@ const Nav = ({ setActive }) => {
       </div>
       <img
         onClick={() => setActive(true)}
-        className={navStyle.burger__logo}
+        className={navStyle.burgers}
         src={menu_burger}
         alt="burger_logo"
       />

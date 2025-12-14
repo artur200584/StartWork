@@ -11,7 +11,6 @@ const Header = () => {
     <header className={style.header}>
       <Nav setActive={setModal} />
       {modal && <Modal active={modal} setActive={setModal} />}
-      <div className="wrapper">{/* <Hero /> */}</div>
     </header>
   );
 };
