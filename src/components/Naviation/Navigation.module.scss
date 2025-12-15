@@ -1,0 +1,92 @@
+@use '../../styles/typography' as typo;
+
+.navigation {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.nav_logo {
+  width: 112px;
+  height: 32px;
+}
+
+.links {
+  display: flex;
+  font-family: typo.$font-main;
+  font-weight: typo.$font-weight-medium;
+  gap: 32px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #525252;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.buttons button {
+  font-size: 16px;
+  font-family: typo.$font-main;
+  font-weight: typo.$font-weight-medium;
+  border-radius: 5px;
+  padding: 10px 16px 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.06);
+  transition: 1s;
+
+  &:hover {
+    background-color: #3730a3;
+    color: #fff;
+  }
+
+  &:focus {
+    background-color: #3730a3;
+    color: #fff;
+  }
+}
+
+.burger__logo {
+  display: none;
+}
+
+.burger__active {
+  display: none;
+}
+
+.text {
+  font-size: 16px;
+  font-family: typo.$font-main;
+  font-weight: typo.$font-weight-bold;
+}
+
+.brand {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 1023px) {
+  .buttons {
+    display: none;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .burger__logo {
+    display: block;
+    mix-blend-mode: multiply;
+  }
+}
