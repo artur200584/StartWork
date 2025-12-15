@@ -51,11 +51,11 @@
   }
 }
 
-.burger__logo {
+.burgers {
   display: none;
 }
 
-.burger__active {
+.burgers__active {
   display: none;
 }
 
@@ -85,7 +85,7 @@
     display: none;
   }
 
-  .burger__logo {
+  .burgers {
     display: block;
     mix-blend-mode: multiply;
   }
