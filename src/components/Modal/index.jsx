@@ -1,7 +1,13 @@
 import backArrow from '../../assets/backArrow.svg';
 import style from './Modal.module.scss';
 
-const navLinks = ['Home', 'Features', 'Pricing', 'About us', 'Contact'];
+const navLinks = [
+  { title: 'Home', href: '/' },
+  { title: 'Features', href: '#features' },
+  { title: 'Pricing', href: '#pricing' },
+  { title: 'About us', href: '#about us' },
+  { title: 'Contact', href: '#contact' },
+];
 
 const Modal = ({ active, setActive }) => {
   return (
@@ -14,7 +20,7 @@ const Modal = ({ active, setActive }) => {
       />
       <ul>
         {navLinks.map((item) => {
-          return <li key={item}>{item}</li>;
+          return <li key={item.href}>{item.title}</li>;
         })}
       </ul>
     </div>

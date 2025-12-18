@@ -1,26 +1,26 @@
-import navLogo from '../../assets/navLogo.jpg';
+import NavLogo from '../../assets/navLogo.jpg';
 import menu_burger from '../../assets/menu__burger.jpg';
-import navStyle from './Navigation.module.scss';
+import styles from './Navigation.module.scss';
 
 const navLinks = [
   { title: 'Home', href: '/' },
-  { title: 'Features', href: '/features' },
-  { title: 'Pricing', href: '/pricing' },
-  { title: 'About us', href: '/about us' },
-  { title: 'Contact', href: '/contact' },
+  { title: 'Features', href: '#features' },
+  { title: 'Pricing', href: '#pricing' },
+  { title: 'About us', href: '#about us' },
+  { title: 'Contact', href: '#contact' },
 ];
 
 const Nav = ({ setActive }) => {
   return (
-    <nav className={navStyle.navigation}>
-      <div className={navStyle.brand}>
+    <nav className={styles.navigation}>
+      <div className={styles.brand}>
         <a href="logoLinks">
-          <img className={navStyle.logo} src={navLogo} alt="navLogo" />
+          <img className={styles.logo} src={NavLogo} alt="navLogo" />
         </a>
-        <p className={navStyle.text}>Abstractly</p>
+        <p className={styles.text}>Abstractly</p>
       </div>
       <div>
-        <ul className={navStyle.links}>
+        <ul className={styles.links}>
           {navLinks.map((item) => (
             <li key={item}>
               <a href={item.href}>{item.title}</a>
@@ -28,13 +28,13 @@ const Nav = ({ setActive }) => {
           ))}
         </ul>
       </div>
-      <div className={navStyle.buttons}>
+      <div className={styles.buttons}>
         <button>Learn More</button>
         <button>See Pricing</button>
       </div>
       <img
         onClick={() => setActive(true)}
-        className={navStyle.burgers}
+        className={styles.burgers}
         src={menu_burger}
         alt="burger_logo"
       />
