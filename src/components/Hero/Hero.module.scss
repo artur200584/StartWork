@@ -1,0 +1,41 @@
+@use '../../styles/typography' as typo;
+@use '../../styles/buttons' as btn;
+
+.content {
+  display: flex;
+  padding: 96px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 32px;
+}
+
+.text {
+  width: 40rem;
+}
+
+.text h1 {
+  font-size: 60px;
+  font-family: typo.$font-main;
+  font-weight: typo.$font-weight-bold;
+  color: #171717;
+  margin-bottom: 24px;
+  text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.text p {
+  font-size: 20px;
+  font-family: typo.$font-main;
+  font-weight: typo.$font-weight-regular;
+  color: #525252;
+}
+
+.buttons {
+  margin-top: 24px;
+  @include btn.buttons-container;
+}
+
+.buttons button {
+  @include btn.button-primary;
+  padding: 16px 24px 16px 24px;
+}

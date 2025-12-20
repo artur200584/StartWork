@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Nav from '../Naviation';
 import Modal from '../Modal';
-import Hero from '../Hero/Hero';
+import Hero from '../Hero';
 import style from './Header.module.scss';
 
 const Header = () => {
@@ -13,6 +13,7 @@ const Header = () => {
         <Nav setActive={setModal} />
         {modal && <Modal active={modal} setActive={setModal} />}
       </header>
+
       <section className="wrapper">
         <Hero />
       </section>

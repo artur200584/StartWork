@@ -1,4 +1,5 @@
 @use '../../styles/typography' as typo;
+@use '../../styles/buttons' as btn;
 
 .navigation {
   display: flex;
@@ -28,30 +29,11 @@
 }
 
 .buttons {
-  display: flex;
-  gap: 16px;
+  @include btn.buttons-container;
 }
 
 .buttons button {
-  font-size: 16px;
-  font-family: typo.$font-main;
-  font-weight: typo.$font-weight-medium;
-  border-radius: 5px;
-  padding: 10px 16px 10px;
-  border: none;
-  background-color: #4f46e5;
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.06);
-  transition: 0.5s;
-  color: #fff;
-
-  &:hover {
-    background-color: #3730a3;
-  }
-
-  &:focus {
-    background-color: #3730a3;
-    color: #fff;
-  }
+  @include btn.button-primary;
 }
 
 .burgers {

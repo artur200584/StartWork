@@ -22,3 +22,13 @@ input,
 textarea {
   font: inherit;
 }
+
+body {
+  background-color: #eef2ff;
+}
+
+.wrapper {
+  margin: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+}
