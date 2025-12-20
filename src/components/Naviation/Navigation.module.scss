@@ -5,7 +5,6 @@
   padding: 16px;
   align-items: center;
   justify-content: space-around;
-  cursor: pointer;
 }
 
 .nav_logo {
@@ -15,12 +14,17 @@
 
 .links {
   display: flex;
+  gap: 32px;
+}
+
+.links a {
   font-family: typo.$font-main;
   font-weight: typo.$font-weight-medium;
-  gap: 32px;
   font-size: 16px;
   line-height: 24px;
   color: #525252;
+  text-decoration: none;
+  display: block;
 }
 
 .buttons {
@@ -34,15 +38,14 @@
   font-weight: typo.$font-weight-medium;
   border-radius: 5px;
   padding: 10px 16px 10px;
-  cursor: pointer;
   border: none;
-  background-color: #fff;
+  background-color: #4f46e5;
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.06);
-  transition: 1s;
+  transition: 0.5s;
+  color: #fff;
 
   &:hover {
     background-color: #3730a3;
-    color: #fff;
   }
 
   &:focus {
