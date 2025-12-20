@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Nav from '../Naviation';
 import Modal from '../Modal';
-import Hero from './Hero';
+import Hero from '../Hero/Hero';
 import style from './Header.module.scss';
 
 const Header = () => {

@@ -1,8 +1,8 @@
-import backArrow from '../../assets/backArrow.svg';
+import BackArrow from '../../assets/backArrow.svg';
 import style from './Modal.module.scss';
 
 const navLinks = [
-  { title: 'Home', href: '/' },
+  { title: 'Home', href: '#hero' },
   { title: 'Features', href: '#features' },
   { title: 'Pricing', href: '#pricing' },
   { title: 'About us', href: '#about us' },
@@ -15,7 +15,7 @@ const Modal = ({ active, setActive }) => {
       <img
         onClick={() => setActive(false)}
         className={style.arow}
-        src={backArrow}
+        src={BackArrow}
         alt="backArrow"
       />
       <ul>
