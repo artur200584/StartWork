@@ -13,7 +13,7 @@
 
 .titleDesktop {
   font-size: 3.7rem;
-  font-family: typo.$font-main;
+  // font-family: typo.$font-main;
   font-weight: typo.$font-weight-bold;
   color: #171717;
   margin-bottom: 0.5em;
@@ -22,9 +22,9 @@
 
 .text p {
   font-size: 1.2rem;
-  font-family: typo.$font-main;
-  font-weight: typo.$font-weight-regular;
-  color: #525252;
+  // font-family: typo.$font-main;
+  // font-weight: typo.$font-weight-regular;
+  color: typo.$font-color;
 }
 
 .buttons {
@@ -40,8 +40,8 @@
 .textMobile {
   display: none;
   font-size: 2.4rem;
-  font-family: typo.$font-main;
-  font-weight: typo.$font-weight-regular;
+  // font-family: typo.$font-main;
+  // font-weight: typo.$font-weight-regular;
   color: #000;
 }
 
