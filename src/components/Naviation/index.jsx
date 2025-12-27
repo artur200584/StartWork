@@ -22,7 +22,7 @@ const Nav = ({ setActive }) => {
       <div>
         <ul className={styles.links}>
           {navLinks.map((item) => (
-            <li key={item}>
+            <li key={item.title}>
               <a href={item.href}>{item.title}</a>
             </li>
           ))}
