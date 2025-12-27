@@ -1,3 +1,5 @@
+@use './typography' as typo;
+
 *,
 *::before,
 *::after {
@@ -23,12 +25,24 @@ textarea {
   font: inherit;
 }
 
+:root {
+  --color-primary: #eef2ff;
+}
+
 body {
-  background-color: #eef2ff;
+  background-color: var(--color-primary);
+  font-family: typo.$font-main;
+  font-weight: typo.$font-weight-regular;
 }
 
 .wrapper {
   margin: 16px;
   border-radius: 5px;
   background-color: #fff;
+}
+
+@media (max-width: 1023px) {
+  .wrapper {
+    margin: 1em;
+  }
 }

@@ -19,11 +19,11 @@
 }
 
 .links a {
-  font-family: typo.$font-main;
+  // font-family: typo.$font-main;
   font-weight: typo.$font-weight-medium;
   font-size: 16px;
   line-height: 24px;
-  color: #525252;
+  color: typo.$font-color;
   text-decoration: none;
   display: block;
 }
@@ -46,7 +46,7 @@
 
 .text {
   font-size: 16px;
-  font-family: typo.$font-main;
+  // font-family: typo.$font-main;
   font-weight: typo.$font-weight-bold;
 }
 

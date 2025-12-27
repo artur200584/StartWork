@@ -3,39 +3,82 @@
 
 .content {
   display: flex;
-  padding: 96px;
+  width: 100%;
+  padding: 6em;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   gap: 32px;
 }
 
-.text {
-  width: 40rem;
-}
-
-.text h1 {
-  font-size: 60px;
-  font-family: typo.$font-main;
+.titleDesktop {
+  font-size: 3.7rem;
+  // font-family: typo.$font-main;
   font-weight: typo.$font-weight-bold;
   color: #171717;
-  margin-bottom: 24px;
+  margin-bottom: 0.5em;
   text-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .text p {
-  font-size: 20px;
-  font-family: typo.$font-main;
-  font-weight: typo.$font-weight-regular;
-  color: #525252;
+  font-size: 1.2rem;
+  // font-family: typo.$font-main;
+  // font-weight: typo.$font-weight-regular;
+  color: typo.$font-color;
 }
 
 .buttons {
-  margin-top: 24px;
+  margin-top: 1.5em;
   @include btn.buttons-container;
 }
 
 .buttons button {
   @include btn.button-primary;
-  padding: 16px 24px 16px 24px;
+  padding: 1em 1.5em 1em 1.5em;
+}
+
+.textMobile {
+  display: none;
+  font-size: 2.4rem;
+  // font-family: typo.$font-main;
+  // font-weight: typo.$font-weight-regular;
+  color: #000;
+}
+
+@media (max-width: 1023px) {
+  .content {
+    padding: 1em;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1em;
+  }
+
+  .text p {
+    margin-bottom: 4em;
+  }
+
+  .titleDesktop {
+    display: none;
+  }
+
+  .textMobile {
+    display: flex;
+    margin-bottom: 1.5em;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
 }
