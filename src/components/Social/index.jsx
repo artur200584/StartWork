@@ -25,24 +25,14 @@ const Social = () => {
     <section className={style.content}>
       <div className={style.text}>Used by teams that you love</div>
       <Marquee>
-        <div className={style.logos}>
-          <ul>
-            {logosItem.map((item, index) => {
-              return (
-                <>
-                  <li key={index}>
-                    <img
-                      className={style.image}
-                      src={item.image}
-                      alt="logosImage"
-                    />
-                  </li>
-                  <span>{item.text}</span>
-                </>
-              );
-            })}
-          </ul>
-        </div>
+        <ul className={style.logos}>
+          {logosItem.map((item, index) => (
+            <li className={style.logosItem} key={index}>
+              <img className={style.image} src={item.image} alt={item.text} />
+              <span>{item.text}</span>
+            </li>
+          ))}
+        </ul>
       </Marquee>
     </section>
   );
