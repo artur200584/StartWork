@@ -1,0 +1,37 @@
+@use '../../styles/typography' as typo;
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 6em;
+  margin-bottom: 6em;
+}
+
+.text {
+  font-size: 1rem;
+  font-weight: typo.$font-weight-medium;
+  color: typo.$font-color;
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+}
+
+.logos li {
+  display: flex;
+  align-items: center;
+}
+
+.logos span {
+  padding-right: 3rem;
+  font-size: 1.5rem;
+  font-weight: typo.$font-weight-bold;
+}
+
+.logos img {
+  padding-right: 1rem;
+}
