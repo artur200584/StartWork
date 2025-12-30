@@ -1,0 +1,28 @@
+@use '../../styles/typography' as typo;
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.description {
+  font-weight: typo.$font-weight-SemiBold;
+  margin-bottom: 0.5rem;
+  color: #4338ca;
+}
+
+.title {
+  font-weight: typo.$font-weight-medium;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.subtitle {
+  max-width: 44em;
+  font-weight: typo.$font-weight-regular;
+  color: typo.$font-color;
+}
