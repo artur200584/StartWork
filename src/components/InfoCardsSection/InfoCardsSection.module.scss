@@ -14,9 +14,21 @@
   max-width: 25em;
 }
 
+.row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+}
+
 .image {
   margin: 0 auto;
   margin-bottom: 2rem;
+}
+
+.imageRow {
+  margin-right: 1rem;
+  width: 2.5rem;
 }
 
 .title {
@@ -31,3 +43,11 @@
   font-size: 1rem;
   color: typo.$font-color;
 }
+
+// @media (max-width: 400px) {
+//   .row {
+//     // display: block;
+//     // flex-direction: column;
+//     max-width: 100%;
+//   }
+// }
