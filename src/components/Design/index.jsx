@@ -1,10 +1,10 @@
-import HeadingDescription from '../HeadingDescription';
 import InfoCardsSection from '../InfoCardsSection';
 import style from './Design.module.scss';
 import LogoHd from '../../assets/HD.jpg';
 import LogoWater from '../../assets/Woter.jpg';
 import LogoLine from '../../assets/Line.jpg';
 import LogoDesing from '../../assets/DesingLogo.jpg';
+import FeatureLayout from '../FeatureLayout';
 
 const infoCardsData = [
   {
@@ -28,19 +28,17 @@ const infoCardsData = [
 
 const Design = () => {
   return (
-    <>
-      <HeadingDescription
-        info={'High quality images'}
-        title={'For designers, by designers'}
-        subtitle={
-          'Unleash boundless creativity with a large repository of images optimized for designers'
-        }
-      />
-      <section className={style.content}>
-        <InfoCardsSection layout="row" items={infoCardsData} />
-        <img className={style.image} src={LogoDesing} alt="image" />
-      </section>
-    </>
+    <FeatureLayout
+      classNames={style.content}
+      info={'High quality images'}
+      title={'For designers, by designers'}
+      subtitle={
+        'Unleash boundless creativity with a large repository of images optimized for designers'
+      }
+    >
+      <InfoCardsSection layout="row" items={infoCardsData} />
+      <img className={style.image} src={LogoDesing} alt="image" />
+    </FeatureLayout>
   );
 };
 
