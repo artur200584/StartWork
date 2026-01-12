@@ -1,14 +1,23 @@
 import style from '../InfoCardsSection/InfoCardsSection.module.scss';
 
-const InfoCardsSection = ({ items }) => {
+const InfoCardsSection = ({ items, layout }) => {
   return (
     <section className={style.content}>
       {items.map((item, index) => {
         return (
-          <div className={style.itemsList} key={index}>
-            <img className={style.image} src={item.image} alt="" />
-            <p className={style.title}>{item.title}</p>
-            <p className={style.subtitle}>{item.subtitle}</p>
+          <div
+            className={layout === 'row' ? style.row : style.itemsList}
+            key={index}
+          >
+            <img
+              className={layout === 'row' ? style.imageRow : style.image}
+              src={item.image}
+              alt="image"
+            />
+            <div>
+              <p className={style.title}>{item.title}</p>
+              <p className={style.subtitle}>{item.subtitle}</p>
+            </div>
           </div>
         );
       })}

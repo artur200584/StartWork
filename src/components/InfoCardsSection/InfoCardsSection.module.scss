@@ -14,9 +14,21 @@
   max-width: 25em;
 }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
+}
+
 .image {
   margin: 0 auto;
   margin-bottom: 2rem;
+}
+
+.imageRow {
+  margin-right: 1rem;
+  width: 2.5rem;
 }
 
 .title {
