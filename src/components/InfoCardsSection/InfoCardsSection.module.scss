@@ -2,11 +2,12 @@
 
 .content {
   display: flex;
+  max-width: 86rem;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  width: 100%;
   gap: 2rem;
 }
 
