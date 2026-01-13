@@ -4,7 +4,7 @@ import styles from './FeatureLayout.module.scss';
 
 export default ({ children, classNames, ...headingProps }) => {
   return (
-    <div>
+    <div className={styles.content}>
       <HeadingDescription {...headingProps} />
       <section className={clsx(classNames)}>{children}</section>
     </div>
