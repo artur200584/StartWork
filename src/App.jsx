@@ -4,6 +4,7 @@ import Features from './components/Features';
 import Design from './components/Design';
 import RootLayout from './components/RootLayout';
 import DesignV2 from './components/DesingV2';
+import OrderCards from './components/OrderCards';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Features />
       <Design />
       <DesignV2 />
+      <OrderCards />
     </RootLayout>
   );
 }
