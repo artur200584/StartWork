@@ -1,14 +1,15 @@
 import FeatureLayout from '../FeatureLayout';
-import style from './OrderCards.module.scss';
-import checkFiil from '../../assets/checkFill.jpg';
+import Cards from '../Cards';
 
-const orderCardsInfo = [
+const itemsOrderCard = [
   {
     title: 'Basic Plan',
     subtitle: 'Access to a curated selection of abstract images',
     prise: '$9.99',
+    priseYear: '$119.88',
     period: '/ month',
     descriptionPrise: 'Billed monthly',
+    descriptionPriseYear: 'Billed annually',
 
     services: [
       'Standard quality images',
@@ -20,8 +21,10 @@ const orderCardsInfo = [
     title: 'Standard Plan',
     subtitle: 'Next-level Integrations, priced economically',
     prise: '$19.99',
+    priseYear: '$239.88',
     period: '/ month',
     descriptionPrise: 'Billed monthly',
+    descriptionPriseYear: 'Billed annually',
 
     services: [
       'Expanded library with more diverse abstract images',
@@ -35,8 +38,10 @@ const orderCardsInfo = [
     title: 'Premium Plan',
     subtitle: 'Experience limitless living for power users',
     prise: '$29.99',
+    priseYear: '$359.88',
     period: '/ month',
     descriptionPrise: 'Billed monthly',
+    descriptionPriseYear: 'Billed annually',
 
     services: [
       'Full access to the entire image library, including exclusive content',
@@ -58,51 +63,7 @@ const OrderCards = () => {
         'Pick the plan that suits you today and step up as your demands grow - our flexible options have your journey mapped out.'
       }
     >
-      <div className={style.buttonContent}>
-        <button>Monthly</button>
-        <button>Annually</button>
-      </div>
-      <section className={style.content}>
-        {orderCardsInfo.map((item, index) => {
-          return (
-            <div className={style.card}>
-              <div className={style.descriptionCard}>More Popular</div>
-              <div className={style.card2}>
-                <div className={style.text}>
-                  <h2>{item.title}</h2>
-                  <p>{item.subtitle}</p>
-                </div>
-
-                <div>
-                  <p className={style.price}>
-                    {item.prise}
-                    <span className={style.period}>{item.period}</span>
-                  </p>
-                  <p className={style.description}>{item.descriptionPrise}</p>
-                </div>
-
-                <div className={style.linkPrise}>
-                  <ul>
-                    {item.services.map((item, index) => {
-                      return (
-                        <>
-                          <li key={index}>
-                            <img src={checkFiil} alt="image" />
-                            <span>{item}</span>
-                          </li>
-                        </>
-                      );
-                    })}
-                  </ul>
-                </div>
-                <div className={style.buttonCards}>
-                  <button>Buy now</button>
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </section>
+      <Cards items={itemsOrderCard} />
     </FeatureLayout>
   );
 };
