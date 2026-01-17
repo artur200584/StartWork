@@ -32,7 +32,11 @@ const Cards = ({ items }) => {
                 <div>
                   <p className={style.price}>
                     {billingPeriod === 'Monthly' ? item.prise : item.priseYear}
-                    <span className={style.period}>{item.period}</span>
+                    <span className={style.period}>
+                      {billingPeriod === 'Monthly'
+                        ? item.period
+                        : item.periodYear}
+                    </span>
                   </p>
                   <p className={style.description}>
                     {billingPeriod === 'Monthly'

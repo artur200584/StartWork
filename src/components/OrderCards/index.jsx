@@ -8,6 +8,7 @@ const itemsOrderCard = [
     prise: '$9.99',
     priseYear: '$119.88',
     period: '/ month',
+    periodYear: '/ year',
     descriptionPrise: 'Billed monthly',
     descriptionPriseYear: 'Billed annually',
 
@@ -23,6 +24,7 @@ const itemsOrderCard = [
     prise: '$19.99',
     priseYear: '$239.88',
     period: '/ month',
+    periodYear: '/ year',
     descriptionPrise: 'Billed monthly',
     descriptionPriseYear: 'Billed annually',
 
@@ -40,6 +42,7 @@ const itemsOrderCard = [
     prise: '$29.99',
     priseYear: '$359.88',
     period: '/ month',
+    periodYear: '/ year',
     descriptionPrise: 'Billed monthly',
     descriptionPriseYear: 'Billed annually',
 
