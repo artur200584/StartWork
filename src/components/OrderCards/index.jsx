@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import FeatureLayout from '../FeatureLayout';
-import Cards from '../Cards';
+import Card from '../Card';
+import style from './OrderCards.module.scss';
 
 const itemsOrderCard = [
   {
@@ -58,6 +60,11 @@ const itemsOrderCard = [
 ];
 
 const OrderCards = () => {
+  const [isMonthly, setIsMonthly] = useState('Monthly');
+
+  const handleClickMonthly = () => setIsMonthly('Monthly');
+  const handleClickAnnually = () => setIsMonthly('Annually');
+
   return (
     <FeatureLayout
       info={'Pricing Tiers'}
@@ -66,7 +73,15 @@ const OrderCards = () => {
         'Pick the plan that suits you today and step up as your demands grow - our flexible options have your journey mapped out.'
       }
     >
-      <Cards items={itemsOrderCard} />
+      <div className={style.buttonContent}>
+        <button onClick={handleClickMonthly}>Monthly</button>
+        <button onClick={handleClickAnnually}>Annually</button>
+      </div>
+      <div className={style.content}>
+        {itemsOrderCard.map((item, index) => {
+          return <Card key={index} {...item} billingPeriod={isMonthly} />;
+        })}
+      </div>
     </FeatureLayout>
   );
 };

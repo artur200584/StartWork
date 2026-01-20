@@ -1,27 +1,7 @@
 @use '../../styles/typography' as typo;
 @use '../../styles/buttons' as btn;
 
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 6rem;
-  gap: 2rem;
-}
-
-.buttonContent {
-  @include btn.buttons-container;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttonContent button {
-  @include btn.button-primary;
-}
-
 .card {
-  flex: 1 1 calc(33.333% - 2rem);
   display: flex;
   border: 1px gray solid;
   border-radius: 5px;
@@ -38,9 +18,10 @@
   }
 }
 
-.card2 {
+.content {
   display: flex;
-  height: 100%;
+  max-width: 24em;
+  height: 45em;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
@@ -70,16 +51,16 @@
   color: typo.$font-color;
 }
 
-.price {
+.prise {
   font-weight: typo.$font-weight-SemiBold;
-  font-size: 48px;
+  font-size: 3rem;
   color: #000;
 }
 
 .period {
-  font-size: 0.4em;
-  font-weight: typo.$font-weight-regular;
-  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(0, 0, 0);
 }
 
 .description {
