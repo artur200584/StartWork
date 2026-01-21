@@ -5,13 +5,9 @@ const Card = ({
   title,
   subtitle,
   prise,
-  priseYear,
   period,
-  periodYear,
   descriptionPrise,
-  descriptionPriseYear,
   services,
-  billingPeriod,
 }) => {
   return (
     <section>
@@ -25,16 +21,10 @@ const Card = ({
 
           <div>
             <p className={style.prise}>
-              {billingPeriod === 'Monthly' ? prise : priseYear}
-              <span className={style.period}>
-                {billingPeriod === 'Monthly' ? period : periodYear}
-              </span>
+              {prise}
+              <span className={style.period}>{period}</span>
             </p>
-            <p className={style.description}>
-              {billingPeriod === 'Monthly'
-                ? descriptionPrise
-                : descriptionPriseYear}
-            </p>
+            <p className={style.description}>{descriptionPrise}</p>
           </div>
 
           <div className={style.linkPrise}>

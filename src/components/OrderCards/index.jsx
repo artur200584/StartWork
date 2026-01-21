@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import FeatureLayout from '../FeatureLayout';
 import Card from '../Card';
+import Button from '../Button';
 import style from './OrderCards.module.scss';
 
-const itemsOrderCard = [
+let itemsOrderCard = [
   {
     title: 'Basic Plan',
     subtitle: 'Access to a curated selection of abstract images',
@@ -74,12 +75,40 @@ const OrderCards = () => {
       }
     >
       <div className={style.buttonContent}>
-        <button onClick={handleClickMonthly}>Monthly</button>
-        <button onClick={handleClickAnnually}>Annually</button>
+        <Button
+          variant={isMonthly === 'Monthly' ? 'shadow' : 'text'}
+          onClick={handleClickMonthly}
+        >
+          Monthly
+        </Button>
+        <Button
+          variant={isMonthly === 'Annually' ? 'shadow' : 'text'}
+          onClick={handleClickAnnually}
+        >
+          Annually
+        </Button>
       </div>
       <div className={style.content}>
         {itemsOrderCard.map((item, index) => {
-          return <Card key={index} {...item} billingPeriod={isMonthly} />;
+          const priceDescription =
+            isMonthly === 'Monthly' ? item.prise : item.priseYear;
+
+          const periodDescription =
+            isMonthly === 'Monthly' ? item.period : item.periodYear;
+
+          const descriptionPriseCard =
+            isMonthly === 'Monthly'
+              ? item.descriptionPrise
+              : item.descriptionPriseYear;
+          return (
+            <Card
+              key={index}
+              {...item}
+              prise={priceDescription}
+              period={periodDescription}
+              descriptionPrise={descriptionPriseCard}
+            />
+          );
         })}
       </div>
     </FeatureLayout>

@@ -50,6 +50,7 @@ const FAQ = () => {
                   <p className={style.textSubtitle}>{item.subtitle}</p>
                 </li>
                 <img src={indeterminateCirclee} alt="image" />
+                <hr />
               </div>
             );
           })}
