@@ -1,0 +1,37 @@
+@use '../../styles/typography' as typo;
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 6rem;
+  gap: 1.7rem;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lis li {
+  border-bottom: 1px solid #000;
+}
+
+.list li:last-child {
+  border: none;
+}
+
+.textTitle {
+  font-weight: typo.$font-weight-SemiBold;
+  color: black;
+  padding-bottom: 0.5rem;
+}
+
+.textSubtitle {
+  font-weight: typo.$font-weight-regular;
+  color: typo.$font-color;
+  padding-bottom: 1.4rem;
+}
