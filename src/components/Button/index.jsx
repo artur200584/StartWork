@@ -3,7 +3,8 @@ import style from './Button.module.scss';
 
 const Button = ({ variant = 'text', children, ...props }) => {
   const className = clsx(
-    variant === 'shadow' ? style.buttonShadow : style.buttonText
+    variant === 'shadow' ? style.buttonShadow : style.buttonText,
+    variant === 'primary' && style.buttonPrimary
   );
 
   return (

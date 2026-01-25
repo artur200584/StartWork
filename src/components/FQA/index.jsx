@@ -1,8 +1,9 @@
 import FeatureLayout from '../FeatureLayout';
 import style from './FAQ.module.scss';
-import indeterminateCirclee from '../../assets/indeterminateCirclee.jpg';
+import QuestionItem from '../QuestionItem';
+import Button from '../Button';
 
-const answerSection = [
+let questions = [
   {
     title: 'What types of images are available on your platform?',
     subtitle:
@@ -42,25 +43,28 @@ const FAQ = () => {
     >
       <section className={style.content}>
         <ul>
-          {answerSection.map((item, index) => {
+          {questions.map((item, index) => {
             return (
-              <div className={style.list}>
-                <li key={index}>
-                  <p className={style.textTitle}>{item.title}</p>
-                  <p className={style.textSubtitle}>{item.subtitle}</p>
-                </li>
-                <img src={indeterminateCirclee} alt="image" />
-                <hr />
-              </div>
+              <QuestionItem
+                key={index}
+                question={item.title}
+                answer={item.subtitle}
+                last={index === questions.length - 1}
+              />
             );
           })}
         </ul>
-        <div>
-          <div>
-            <p>Can’t find the answer you’re looking for?</p>
-            <p>Reach out to our customer support team.</p>
+        <div className={style.footer}>
+          <div className={style.text}>
+            <p className={style.footerTitle}>
+              Can’t find the answer you’re looking for?
+            </p>
+            <p className={style.footerSubtitle}>
+              Reach out to our
+              <span className={style.span}> customer support </span> team.
+            </p>
           </div>
-          <button>Get in touch</button>
+          <Button variant="primary">Get in touch</Button>
         </div>
       </section>
     </FeatureLayout>
