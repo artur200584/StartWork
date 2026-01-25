@@ -1,8 +1,9 @@
 import FeatureLayout from '../FeatureLayout';
 import style from './FAQ.module.scss';
-import FqaItem from '../FQAitem';
+import QuestionItem from '../QuestionItem';
+import Button from '../Button';
 
-let QuestionItem = [
+let questions = [
   {
     title: 'What types of images are available on your platform?',
     subtitle:
@@ -42,13 +43,13 @@ const FAQ = () => {
     >
       <section className={style.content}>
         <ul>
-          {QuestionItem.map((item, index) => {
+          {questions.map((item, index) => {
             return (
-              <FqaItem
+              <QuestionItem
                 key={index}
-                title={item.title}
-                subtitle={item.subtitle}
-                last={index === QuestionItem.length - 1}
+                question={item.title}
+                answer={item.subtitle}
+                last={index === questions.length - 1}
               />
             );
           })}
@@ -63,9 +64,7 @@ const FAQ = () => {
               <span className={style.span}> customer support </span> team.
             </p>
           </div>
-          <div className={style.footerButton}>
-            <button>Get in touch</button>
-          </div>
+          <Button variant="primary">Get in touch</Button>
         </div>
       </section>
     </FeatureLayout>

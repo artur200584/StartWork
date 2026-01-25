@@ -36,13 +36,13 @@
   }
 }
 
-.footerButton {
-  @include btn.buttons-container;
-}
+// .footerButton {
+//   @include btn.buttons-container;
+// }
 
-.footerButton button {
-  @include btn.button-primary;
-}
+// .footerButton button {
+//   @include btn.button-primary;
+// }
 
 @media (max-width: 480px) {
   .content {
