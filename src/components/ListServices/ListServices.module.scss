@@ -1,0 +1,15 @@
+@use '../../styles/typography' as typo;
+@use '../../styles/buttons' as btn;
+
+.linkPrise ul {
+  display: flex;
+  flex-direction: column;
+  color: typo.$font-color;
+  gap: 2em;
+}
+
+.linkPrise li {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+}

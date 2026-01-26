@@ -6,6 +6,7 @@ import RootLayout from './components/RootLayout';
 import DesignV2 from './components/DesingV2';
 import OrderCards from './components/OrderCards';
 import FAQ from './components/FQA';
+import NewSletter from './components/NewSletter';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <DesignV2 />
       <OrderCards />
       <FAQ />
+      <NewSletter />
     </RootLayout>
   );
 }

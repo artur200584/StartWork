@@ -67,19 +67,6 @@
   color: typo.$font-color;
 }
 
-.linkPrise ul {
-  display: flex;
-  flex-direction: column;
-  color: typo.$font-color;
-  gap: 2em;
-}
-
-.linkPrise li {
-  display: flex;
-  align-items: center;
-  gap: 0.8em;
-}
-
 .buttonCards {
   @include btn.buttons-container;
   justify-content: center;
