@@ -1,5 +1,5 @@
 import style from './Card.module.scss';
-import chekFill from '../../assets/checkFill.jpg';
+import PaymentPlanCard from '../PaymentPlanCard';
 
 const Card = ({
   title,
@@ -27,18 +27,7 @@ const Card = ({
             <p className={style.description}>{descriptionPrise}</p>
           </div>
 
-          <div className={style.linkPrise}>
-            <ul>
-              {services.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <img src={chekFill} alt="" />
-                    {item}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+          <PaymentPlanCard items={services} />
 
           <div className={style.buttonCards}>
             <button>Buy now</button>

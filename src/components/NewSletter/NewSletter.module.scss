@@ -1,0 +1,72 @@
+@use '../../styles/typography' as typo;
+
+.row {
+  display: flex;
+  padding: 6rem;
+}
+
+.content {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  max-width: 100%;
+  justify-content: center;
+  flex-direction: column;
+
+  p {
+    color: typo.$font-color;
+  }
+}
+
+.title {
+  font-weight: typo.$font-weight-SemiBold;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.inputs {
+  display: flex;
+  width: 100%;
+  margin-top: 3rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  input {
+    width: 334px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color: #e5e5e5;
+  }
+}
+
+@media (max-width: 1200px) {
+  .row {
+    flex-wrap: wrap;
+    padding: 2rem 1rem;
+  }
+  .contetn {
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .text {
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .inputs {
+    flex-direction: column;
+  }
+}
