@@ -1,5 +1,5 @@
 import Button from '../Button';
-import ListServices from '../ListServices';
+import ListServices from '../PaymentPlanCard';
 import style from './NewSletter.module.scss';
 import NewSletterImage from '../../assets/NewSletterImage.jpg';
 
@@ -12,7 +12,7 @@ let services = [
 const NewSletter = () => {
   return (
     <section className={style.row}>
-      <div className={style.contetn}>
+      <div className={style.content}>
         <div className={style.text}>
           <h2 className={style.title}>
             Get the finest curated abstracts delivered weekly to your inbox

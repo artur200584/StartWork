@@ -1,7 +1,7 @@
 import chekFill from '../../assets/checkFill.jpg';
-import style from './ListServices.module.scss';
+import style from './PaymentPlanCard.module.scss';
 
-const ListServices = ({ items }) => {
+const PaymentPlanCard = ({ items }) => {
   return (
     <div className={style.linkPrise}>
       <ul>
@@ -18,4 +18,4 @@ const ListServices = ({ items }) => {
   );
 };
 
-export default ListServices;
+export default PaymentPlanCard;
