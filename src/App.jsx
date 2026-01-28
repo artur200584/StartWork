@@ -7,6 +7,7 @@ import DesignV2 from './components/DesingV2';
 import OrderCards from './components/OrderCards';
 import FAQ from './components/FQA';
 import NewSletter from './components/NewSletter';
+import Support from './components/Support';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <OrderCards />
       <FAQ />
       <NewSletter />
+      <Support />
     </RootLayout>
   );
 }
