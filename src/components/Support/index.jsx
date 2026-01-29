@@ -16,9 +16,15 @@ let infoItems = [
 const maxLeaght = 500;
 
 const Suport = () => {
-  const [count, SetCount] = useState('');
+  const [count, setCount] = useState('');
 
-  const handleClick = (e) => SetCount(e.target.value);
+  const handleClick = (e) => setCount(e.target.value);
+
+  const handleSubmit = (e) => {
+    (e.preventDefault(), setCount(''));
+  };
+
+  const isTooShort = count.length === 500;
 
   return (
     <section className={style.conteiner}>
@@ -33,7 +39,7 @@ const Suport = () => {
           <InfoCardsSection items={infoItems} layout="row" />
         </div>
 
-        <form className={style.form} action="/">
+        <form className={style.form} action="/" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name">Name</label>
             <input id="name" name="name" type="text" placeholder="Your Name" />
@@ -52,16 +58,12 @@ const Suport = () => {
           <div className={style.textareaForm}>
             <label htmlFor="message">Message</label>
             <textarea
-              className={clsx(
-                style.textarea,
-                count.length === maxLeaght && style.error
-              )}
+              className={clsx(style.textarea, isTooShort && style.error)}
               onChange={handleClick}
               id="message"
               name="message"
-              type="text"
-              maxLength={maxLeaght}
               placeholder="Write your message..."
+              value={count}
             />
             <p className={style.counter}>
               {count.length < maxLeaght ? (
@@ -74,7 +76,7 @@ const Suport = () => {
             </p>
           </div>
 
-          <Button className={style.button} variant="primary">
+          <Button type="submit" className={style.button} variant="primary">
             Submit
           </Button>
         </form>
