@@ -1,0 +1,30 @@
+@use '../../styles/typography' as typo;
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.contact ul {
+  display: flex;
+  margin-bottom: 2rem;
+  gap: 1.2rem;
+
+  a {
+    font-weight: typo.$font-weight-medium;
+    font-size: 0.8rem;
+    color: typo.$font-color;
+    text-decoration: none;
+  }
+}
+
+.imageFooter ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
