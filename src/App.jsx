@@ -8,6 +8,7 @@ import OrderCards from './components/OrderCards';
 import FAQ from './components/FQA';
 import NewSletter from './components/NewSletter';
 import Support from './components/Support';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <FAQ />
       <NewSletter />
       <Support />
+      <Footer />
     </RootLayout>
   );
 }
