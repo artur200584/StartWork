@@ -45,12 +45,15 @@
   }
 }
 
+// .image {
+//   // max-width: 37rem;
+// }
+
 @media (max-width: 1200px) {
   .row {
-    flex-wrap: wrap;
     padding: 2rem 1rem;
   }
-  .contetn {
+  .content {
     flex-wrap: wrap;
     flex-direction: column;
     gap: 3rem;

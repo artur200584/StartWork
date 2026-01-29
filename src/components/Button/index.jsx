@@ -1,14 +1,18 @@
 import clsx from 'clsx';
 import style from './Button.module.scss';
 
-const Button = ({ variant = 'text', children, ...props }) => {
-  const className = clsx(
+const Button = ({ variant = 'text', children, type, className, ...props }) => {
+  const variantClassName = clsx(
     variant === 'shadow' ? style.buttonShadow : style.buttonText,
     variant === 'primary' && style.buttonPrimary
   );
 
   return (
-    <button className={className} {...props}>
+    <button
+      type={type}
+      className={clsx(variantClassName, className)}
+      {...props}
+    >
       {children}
     </button>
   );

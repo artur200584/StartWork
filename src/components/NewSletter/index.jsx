@@ -26,7 +26,6 @@ const NewSletter = () => {
           </div>
           <p>We only send you the best! No spam.</p>
         </div>
-
         <img src={NewSletterImage} alt="image" />
       </div>
     </section>
